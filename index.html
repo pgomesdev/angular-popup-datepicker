@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+  <head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.min.js"></script>
+    <script src="locale.js"></script>
+    <script src="app.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<div ng-controller="DatepickerPopupDemoCtrl">
+    <h4>Popup</h4>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="input-group">
+          <input type="text" class="form-control" show-button-bar="false" popup-placement="right" uib-datepicker-popup="{{format}}" datepicker-popup-template-url="popup.html" datepicker-template-url="datepicker.html" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ui-mask="99/99/9999" ui-mask-placeholder ui-mask-placeholder-char="_" model-view-value="true"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+    <hr />
+</div>
+  </body>
+</html>
